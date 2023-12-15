@@ -1,0 +1,121 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h2 {
+    color: #444;
+}
+
+.navbar {
+    marginbottom 30px;
+    background-color: #ff6f61;
+    border-color: #ff6f61;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    
+}
+
+.navbar-dark .navbar-brand {
+   color: #fff;
+}
+
+.card {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.image-container {
+    height: 50px;
+    width: 444.44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card-img-top {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    object-fit: contain;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none; /* Remove the default background images */
+}
+
+.carousel-control-prev-icon:after,
+.carousel-control-next-icon:after {
+    content: '>'; /* Use '>' for next, and '<' for prev */
+    font-size: 24px; /* Adjust the size as needed */
+    display: inline-block; /* Display as inline-block */
+    color: black; /* Set the color to black */
+}
+
+.carousel-control-prev-icon:after {
+    content: '<'; /* Use '<' for prev */
+}
+
+
+
+.card {
+    height: 100px;
+    justify-content: space-between;
+    min-height: 200px;
+    margin-bottom: 15px;
+    border: 1px solid #ff6f61;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.card-footer {
+    margin-top: auto; /* This will push the footer to the bottom of the flex container */
+}
+
+.card:hover {
+    background-color: #ff6f61;
+    color: #fff;
+}
+
+.card:hover .btn {
+    visibility: visible;
+    opacity: 1;
+}
+
+.card .btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+    background-color: #fff;
+    color: #ff6f61;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    margin-bottom: 20px;
+}

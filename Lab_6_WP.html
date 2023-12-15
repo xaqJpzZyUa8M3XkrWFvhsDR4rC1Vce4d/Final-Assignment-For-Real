@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Planner App</title>
+<!-- Include Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+  .result-table td, .result-table th {
+    text-align: center;
+  }
+  .result-table {
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">My Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="Lab_7_Resume.pdf" download="Jonathan_Doerman_Best_Candidate">Resume</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Portfolio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<div class="container mt-5">
+  <!-- Step 1: Number of Guests -->
+  <div class="row justify-content-center mb-3">
+    <div class="col-md-6">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">1</span>
+        </div>
+        <input type="number" id="guests-input" class="form-control" placeholder="How many guests do you have?">
+      </div>
+    </div>
+  </div>
+  <!-- Step 2: Number of Tables -->
+  <div class="row justify-content-center mb-3">
+    <div class="col-md-6">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">2</span>
+        </div>
+        <input type="number" id="tables-input" class="form-control" placeholder="How many tables do you want?">
+      </div>
+    </div>
+  </div>
+  <!-- Step 3: Calculation Result -->
+  <div class="row justify-content-center">
+    <div class="col-md-6 text-center">
+      <button class="btn btn-primary" onclick="calculateTables()">Calculate</button>
+      <table class="table table-bordered result-table" id="result-table" style="display:none;">
+        <thead>
+          <tr>
+            <th>Table Number</th>
+            <th>Number of Guests</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Table rows will be added here based on calculation -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Include Bootstrap JS and its dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+function calculateTables() {
+  var guests = parseInt(document.getElementById('guests-input').value);
+  var tables = parseInt(document.getElementById('tables-input').value);
+  var tableBody = document.querySelector('#result-table tbody');
+  tableBody.innerHTML = ''; // Clear previous results
+  if (!isNaN(guests) && !isNaN(tables) && tables > 0) {
+    var guestsPerTable = Math.floor(guests / tables);
+    var extraGuests = guests % tables;
+    for (var i = 1; i <= tables; i++) {
+      var guestsAtTable = guestsPerTable + (i <= extraGuests ? 1 : 0);
+      var row = tableBody.insertRow();
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      cell1.innerHTML = 'Table ' + i;
+      cell2.innerHTML = guestsAtTable;
+    }
+    document.getElementById('result-table').style.display = 'table';
+  } else {
+    var row = tableBody.insertRow();
+    var cell = row.insertCell(0);
+    cell.setAttribute('colspan', '2');
+    cell.innerHTML = 'Please enter a valid number of guests and tables.';
+    document.getElementById('result-table').style.display = 'table';
+  }
+}
+</script>
+</body>
+</html>

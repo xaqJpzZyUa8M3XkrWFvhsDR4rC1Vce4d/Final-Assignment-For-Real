@@ -1,0 +1,61 @@
+/* CSS for .container */
+.container {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  /* CSS for .dice */
+  .dice {
+    text-align: center;
+    display: inline-block;
+  }
+  
+  /* CSS for body */
+  body {
+    background-color: #282930;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* CSS for h1 */
+  h1 {
+    margin: 30px;
+    text-shadow: 5px 0 #232931;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #3cc6d0;
+  }
+  
+  /* CSS for h2 and h3 */
+  h2, h3 {
+    margin: 30px;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #3cc6d0;
+  }
+  
+  /* CSS for p */
+  p {
+    color: #3cc6d0;
+  }
+  
+  /* CSS for img */
+  img {
+    width: 80%;
+    background-color: #ef1f1f;
+    border-radius: 30%;
+    mix-blend-mode: hard-light;
+  }
+  
+  /* CSS for .myBtn (assuming it's a class for a button) */
+  .myBtn {
+    margin: 30px;
+  }
+  
+  /* CSS for footer */
+  footer {
+    margin-top: 5%;
+    color: #EEEEEE;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }

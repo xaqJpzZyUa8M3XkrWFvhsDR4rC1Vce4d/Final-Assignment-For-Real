@@ -1,0 +1,72 @@
+/* COGS3 studyBuddy specific styles go here. */
+#title {
+    background-color:rgb(19, 235, 246);
+}
+
+.container-fluid {
+    padding: 3% 15%;
+}
+
+#h1 {
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+#h3 {
+    font-family: 'Montserrat';
+    font-weight: bold;
+}
+
+p{
+   color: #8f8f8f 
+}
+.navbar {
+    padding: 0 0 4.5 rem;
+}
+
+.navbar-brand {
+    font-family: Ubuntu;
+    font-size: 2.5 rem;
+    font-weight: bold;
+}
+
+.nav-item {
+    padding: 0 18px;
+}
+
+.navbar-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2 rem;
+}
+
+.download-button {
+    margin: 5% 3% 5% 0;
+}
+
+
+
+.title-image {
+    width: 60%;
+
+}
+
+#features {
+    padding 8% 15%;
+}
+
+.feature-box {
+    text-align: center;
+    padding: 5%
+}
+
+.carousel-slide {
+    padding: 10% 10%;
+    outline-width: 3px;
+    outline: black;
+
+}
+
+.card {
+    padding: 15px 15px 15px 15px;
+}
